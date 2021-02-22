@@ -48,13 +48,6 @@ let producer = new Producer({
   'metadata.broker.list': 'kafka:9092'
 });
 
-async function handleMessage(msg) {
-  let id = kafkaUtils.getMsgId(msg);
-  let payload = JSON.parse(msg.value); // assuming JSON payload
-  
-  // do stuff
-}
-
 (async function() {
 
   await producer.connect();
