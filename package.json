@@ -1,0 +1,30 @@
+{
+  "name": "@ucd-lib/node-kafka",
+  "description": "A wrapper around node-rdkafka implementing a standard way of using rdkafka",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "node-rdkafka": "^2.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucd-library/node-kafka.git"
+  },
+  "keywords": [
+    "kafka",
+    "node-rdkafka"
+  ],
+  "author": "jrmerz@ucdavis.edu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ucd-library/node-kafka/issues"
+  },
+  "homepage": "https://github.com/ucd-library/node-kafka#readme"
+}
