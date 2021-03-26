@@ -25,7 +25,7 @@ async function handleMessage(msg) {
 (async function() {
 
   await consumer.connect();
-  await kafka.utils.ensureTopic({
+  await kafkaUtils.ensureTopic({
       topic : 'my-topic',
       num_partitions: 10,
       replication_factor: 1
@@ -51,7 +51,7 @@ let producer = new Producer({
 (async function() {
 
   await producer.connect();
-  await kafka.utils.ensureTopic({
+  await kafkaUtils.ensureTopic({
       topic : 'my-topic',
       num_partitions: 10,
       replication_factor: 1
