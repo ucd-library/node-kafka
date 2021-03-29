@@ -6,7 +6,7 @@ Please checkout [node-rdkafka](https://github.com/Blizzard/node-rdkafka) for bas
 
 Sample Consumer
 ```javascript
-const {Consumer, kafkaUtils} = require('@ucd-lib/node-kafka');
+const {Consumer, utils} = require('@ucd-lib/node-kafka');
 
 let consumer = new Consumer({
   'group.id': 'service-group-id',
@@ -16,7 +16,7 @@ let consumer = new Consumer({
 });
 
 async function handleMessage(msg) {
-  let id = kafkaUtils.getMsgId(msg);
+  let id = utils.getMsgId(msg);
   let payload = JSON.parse(msg.value); // assuming JSON payload
   
   // do stuff
@@ -25,7 +25,7 @@ async function handleMessage(msg) {
 (async function() {
 
   await consumer.connect();
-  await kafkaUtils.ensureTopic({
+  await utils.ensureTopic({
       topic : 'my-topic',
       num_partitions: 10,
       replication_factor: 1
@@ -42,7 +42,7 @@ async function handleMessage(msg) {
 Sample Producer
 Sample Consumer
 ```javascript
-const {Producer, kafkaUtils} = require('@ucd-lib/node-kafka');
+const {Producer, utils} = require('@ucd-lib/node-kafka');
 
 let producer = new Producer({
   'metadata.broker.list': 'kafka:9092'
@@ -51,7 +51,7 @@ let producer = new Producer({
 (async function() {
 
   await producer.connect();
-  await kafkaUtils.ensureTopic({
+  await utils.ensureTopic({
       topic : 'my-topic',
       num_partitions: 10,
       replication_factor: 1
