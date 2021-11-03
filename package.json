@@ -1,12 +1,13 @@
 {
   "name": "@ucd-lib/node-kafka",
   "description": "A wrapper around node-rdkafka implementing a standard way of using rdkafka",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
+    "bunyan": "^1.8.15",
     "delay": "^5.0.0",
     "node-rdkafka": "^2.10.1"
   },
