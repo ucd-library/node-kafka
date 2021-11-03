@@ -1,7 +1,7 @@
 {
   "name": "@ucd-lib/node-kafka",
   "description": "A wrapper around node-rdkafka implementing a standard way of using rdkafka",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -9,7 +9,7 @@
   "dependencies": {
     "bunyan": "^1.8.15",
     "delay": "^5.0.0",
-    "node-rdkafka": "^2.10.1"
+    "node-rdkafka": "^2.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
